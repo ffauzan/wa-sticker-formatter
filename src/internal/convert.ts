@@ -29,7 +29,7 @@ const convert = async (
         ]
     }
 
-    const img = sharp(image, { animated: isAnimated }).toFormat('webp')
+    const img = sharp(image, { animated: isAnimated, limitInputPixels: 0 }).toFormat('webp')
 
     switch (type) {
         case StickerTypes.CROPPED:
